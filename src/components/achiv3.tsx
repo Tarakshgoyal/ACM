@@ -1,12 +1,18 @@
 'use client'
 
-import React from 'react'
+import React, { useEffect } from 'react'
+import AOS from 'aos'
+import 'aos/dist/aos.css'
 
 const Achiv3 = () => {
+  useEffect(() => {
+    AOS.init({ once: true })
+  }, [])
+
   return (
     <>
       <section className="bg-primary text-white pb-12">
-        <div className="container ">
+        <div className="container">
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 items-center">
             <div data-aos="zoom-in">
               <img
@@ -31,7 +37,7 @@ const Achiv3 = () => {
                 21 Days of Code
               </h1>
               <p data-aos="fade-up" data-aos-delay="700">
-              We launched 21 Days of Code to promote the environment for competitive programming and instil coding as second nature and a daily habit for 21 regular days.
+                We launched 21 Days of Code to promote the environment for competitive programming and instil coding as second nature and a daily habit for 21 regular days.
               </p>
               <button
                 data-aos="fade-up"

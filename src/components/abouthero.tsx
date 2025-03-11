@@ -1,8 +1,18 @@
 'use client'
 
-import React from 'react'
+import React, { useEffect } from 'react'
+import AOS from 'aos'
+import 'aos/dist/aos.css'
 
 const AboutHero = () => {
+  // Initialize AOS on component mount
+  useEffect(() => {
+    AOS.init({ 
+      duration: 1000, // Animation duration (ms)
+      once: true,     // Whether animation should only happen once
+    })
+  }, [])
+
   return (
     <div className="relative bg-black/20 h-full">
       <div className="h-full flex justify-center items-center p-4 relative z-10">

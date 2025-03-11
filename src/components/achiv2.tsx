@@ -1,8 +1,14 @@
 'use client'
 
-import React from 'react'
+import React, { useEffect } from 'react'
+import AOS from 'aos'
+import 'aos/dist/aos.css'
 
 const Achiv2 = () => {
+  useEffect(() => {
+    AOS.init({ duration: 1000 })
+  }, [])
+
   return (
     <>
       <section className="bg-primary text-white py-20">
@@ -24,7 +30,7 @@ const Achiv2 = () => {
                 Code Anytime
               </h1>
               <p data-aos="fade-up" data-aos-delay="700">
-              Code Anytime is our round-the-year initiative to encourage free-spirited coding among beginners to amplify their passion for programming.
+                Code Anytime is our round-the-year initiative to encourage free-spirited coding among beginners to amplify their passion for programming.
               </p>
               <button
                 data-aos="fade-up"
@@ -36,7 +42,7 @@ const Achiv2 = () => {
             </div>
             <div data-aos="zoom-in">
               <img
-                src='img3.jpg'
+                src="img3.jpg"
                 alt=""
                 className="w-full sm:w-[80%] mx-auto max-h-[300px] object-cover"
               />
