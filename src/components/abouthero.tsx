@@ -9,7 +9,7 @@ const AboutHero = () => {
   useEffect(() => {
     AOS.init({ 
       duration: 1000, // Animation duration (ms)
-      once: true,     // Whether animation should only happen once
+      once: false,     // Whether animation should only happen once
     })
   }, [])
 

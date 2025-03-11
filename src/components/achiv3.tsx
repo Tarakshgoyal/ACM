@@ -6,7 +6,7 @@ import 'aos/dist/aos.css'
 
 const Achiv3 = () => {
   useEffect(() => {
-    AOS.init({ once: true })
+    AOS.init({ once: false })
   }, [])
 
   return (
