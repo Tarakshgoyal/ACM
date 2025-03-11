@@ -15,9 +15,9 @@ function Contact() {
           <div className="w-full md:w-1/2">
             <Form />
           </div>
-          <div className="w-full md:w-1/2">
+          {/* <div className="w-full md:w-1/2">
             <LocationMap />
-          </div>
+          </div> */}
         </div>
       </div>
       <ToastContainer

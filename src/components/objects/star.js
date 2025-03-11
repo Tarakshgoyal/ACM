@@ -1,66 +1,100 @@
 import * as THREE from "three";
 import { BLOOM_LAYER, STAR_MAX, STAR_MIN } from "../config/renderConfig.js";
 import { clamp } from "../utils.js";
+import { Text } from 'troika-three-text';
 
-// Load texture only in the browser
 let texture;
 if (typeof window !== "undefined") {
   texture = new THREE.TextureLoader().load("/sprite120.png");
 }
 
-// Generate variations of (58.2, 255, 255) by adjusting brightness
 const generateBlueShades = (numShades) => {
-  const baseColor = new THREE.Color(58.2 / 255, 1, 1); // Convert RGB to 0-1 range
+  const baseColor = new THREE.Color(58.2 / 255, 1, 1);
   const shades = [];
 
   for (let i = 0; i < numShades; i++) {
-    const brightnessFactor = 0.7 + Math.random() * 0.3; // Between 70% and 100% brightness
+    const brightnessFactor = 0.7 + Math.random() * 0.3;
     shades.push(baseColor.clone().multiplyScalar(brightnessFactor));
   }
 
   return shades;
 };
 
-// Generate 5 different shades of the specified blue
 const blueShades = generateBlueShades(5);
 
 const materials = blueShades.map(
   (color) =>
     new THREE.SpriteMaterial({
-      map: texture || null, // Prevents errors on the server
+      map: texture || null,
       color: color,
-      opacity: 0.5, // Reduce opacity
+      opacity: 0.5,
       transparent: true,
-      blending: THREE.NormalBlending, // Change from AdditiveBlending
+      blending: THREE.NormalBlending,
     })
 );
 
+const pageLinks = ["/about", "/committees", "/our-team", "/contact-us", "/events"];
+const pageTexts = ["About", "Committees", "Our Team", "Contact Us", "Events"];
+
 export class Star {
-  constructor(position) {
+  constructor(position, isClickable = false, index = null) {
     this.position = position;
     this.starType = this.generateStarType();
     this.obj = null;
+    this.isClickable = isClickable;
+    this.index = index;
   }
 
   generateStarType() {
-    return Math.floor(Math.random() * materials.length); // Pick a random blue shade
+    return Math.floor(Math.random() * materials.length);
   }
 
   updateScale(camera) {
     let dist = this.position.distanceTo(camera.position) / 250;
-    let starSize = dist * 1.5; // Adjust size variation
+    let starSize = dist * 1.5;
     starSize = clamp(starSize, STAR_MIN, STAR_MAX);
     this.obj.scale.copy(new THREE.Vector3(starSize, starSize, starSize));
   }
 
+  addText(scene) {
+    if (this.isClickable && this.index !== null) {
+      const textMesh = new Text();
+      textMesh.text = pageTexts[this.index];
+      textMesh.fontSize = 0.5;
+      textMesh.color = 0xffffff;
+      textMesh.position.copy(this.position.clone().add(new THREE.Vector3(0, 2, 0)));
+      textMesh.sync();
+      scene.add(textMesh);
+
+      this.obj.userData = { link: pageLinks[this.index] };
+    }
+  }
+
   toThreeObject(scene) {
-    if (!texture) return; // Ensure texture is loaded before creating the object
-    let star = new THREE.Sprite(materials[this.starType]);
+    if (!texture) return;
+    let starMaterial = materials[this.starType].clone();
+
+    if (this.isClickable) {
+      starMaterial.color.setRGB(1, 1, 1); // Brighter white for clickable stars
+      starMaterial.opacity = 0.8;
+    }
+
+    let star = new THREE.Sprite(starMaterial);
     star.layers.set(BLOOM_LAYER);
-    star.scale.multiplyScalar(0.8); // Reduce size slightly
+    star.scale.multiplyScalar(this.isClickable ? 1.2 : 0.8);
     star.position.copy(this.position);
 
     this.obj = star;
     scene.add(star);
+    this.addText(scene);
+  }
+}
+
+export function handleStarClick(intersects) {
+  if (intersects.length > 0) {
+    const clickedStar = intersects[0].object;
+    if (clickedStar.userData.link) {
+      window.location.href = clickedStar.userData.link;
+    }
   }
 }
