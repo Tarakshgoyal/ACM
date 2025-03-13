@@ -5,11 +5,9 @@ import AOS from 'aos'
 import 'aos/dist/aos.css'
 
 const AboutHero = () => {
-  // Initialize AOS on component mount
   useEffect(() => {
     AOS.init({ 
-      duration: 1000, // Animation duration (ms)
-      once: false,     // Whether animation should only happen once
+      once: false,     
     })
   }, [])
 

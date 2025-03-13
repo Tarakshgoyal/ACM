@@ -13,7 +13,7 @@ const Navbar = () => {
         <div className="container">
           <div className="flex justify-between items-center">
             <div className="flex items-center gap-4 text-white font-bold text-2xl">
-              <img src='/acmlogo.png' alt="" className="w-20" />
+              <img src='/acmlogoo.png' alt="" className="w-20" />
               <a href='http://localhost:3000'>UPES-ACM</a>
             </div>
             <div className="text-white hidden sm:block">
@@ -22,7 +22,7 @@ const Navbar = () => {
                   <a href="http://localhost:3000/about">About</a>
                 </li>
                 <li>
-                  <a href="http://localhost:3000/com">Committes</a>
+                  <a href="http://localhost:3000/comm">Committes</a>
                 </li>
                 <li>
                   <a href="http://localhost:3000/team">Our Team</a>
