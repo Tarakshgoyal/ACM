@@ -2,7 +2,6 @@
 
 import React from 'react'
 import {SparklesIcon} from '@heroicons/react/24/solid'
-import Image from 'next/image'
 
 const HeroContent = () => {
   return (

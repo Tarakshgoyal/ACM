@@ -1,15 +1,16 @@
 import React, { useEffect, useState } from 'react';
+import * as THREE from 'three';
 import { OBJLoader } from 'three/examples/jsm/loaders/OBJLoader.js';
 
 const ModelLoaderComponent: React.FC = () => {
-  const [model, setModel] = useState<any>(null);
+  const [model, setModel] = useState<THREE.Object3D | null>(null);
 
   useEffect(() => {
     const loader = new OBJLoader();
 
-    function modelLoader(url: string): Promise<any> {
+    function modelLoader(url: string): Promise<THREE.Object3D> {
       return new Promise((resolve, reject) => {
-        loader.load(url, (data: any) => resolve(data), undefined, reject);
+        loader.load(url, (data: THREE.Object3D) => resolve(data), undefined, reject);
       });
     }
 

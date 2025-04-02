@@ -22,13 +22,13 @@ const Achiv3 = () => {
               />
             </div>
             <div className="space-y-3 xl:pr-36 p-4 border-r-2 border-b-2 border-r-sky-800 border-b-sky-800 ">
-              <p
+              {/* <p
                 data-aos="fade-up"
                 data-aos-delay="300"
                 className="text-sky-800 uppercase"
               >
                 our initiatives
-              </p>
+              </p> */}
               <h1
                 data-aos="fade-up"
                 data-aos-delay="500"
@@ -42,7 +42,7 @@ const Achiv3 = () => {
               <button
                 data-aos="fade-up"
                 data-aos-delay="900"
-                className="bg-blue-400 text-white hover:bg-blue-500 px-4 py-1 rounded-md duration-200"
+                className="bg-blur text-white hover:bg-grey px-4 py-1 rounded-md duration-200"
               >
                 10+ Mentors | 100+ Students
               </button>

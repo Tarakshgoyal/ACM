@@ -83,13 +83,13 @@ import { useEffect, useRef } from "react";
 import { EffectComposer } from "three/examples/jsm/postprocessing/EffectComposer.js";
 import { RenderPass } from "three/examples/jsm/postprocessing/RenderPass.js";
 import { UnrealBloomPass } from "three/examples/jsm/postprocessing/UnrealBloomPass.js";
-// @ts-ignore
+// @ts-expect-error
 import { Text } from "troika-three-text";
 import spline from "./spline";
 import getStarfield from "./getStarfield";
 
 const ThreeScene = () => {
-  const mountRef = useRef<HTMLDivElement>(null);
+  const mountRef = useRef<HTMLDivElement>(null);//raycaster
 
   useEffect(() => {
     let w = window.innerWidth;
@@ -208,8 +208,8 @@ const ThreeScene = () => {
       crosshairs.add(line);
     }
 
-    const raycaster = new THREE.Raycaster();
-    let lasers: THREE.Mesh[] = [];
+    // const raycaster = new THREE.Raycaster();
+    // let lasers: THREE.Mesh[] = [];
 
     // Update Camera Movement
     function updateCamera(t: number) {

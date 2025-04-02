@@ -23,6 +23,8 @@ let canvas,
     overlayComposer,
     galaxy; // <-- Global variable
 
+let isRotationActive = true;
+const rotationSpeed = 0.004;
 function initThree() {
     canvas = document.querySelector("#canvas");
     scene = new THREE.Scene();
@@ -34,7 +36,7 @@ function initThree() {
         0.1,
         5000000
     );
-    camera.position.set(0, 50, 50);
+    camera.position.set(100, 400, 400); // Changed default zoom size
     camera.up.set(0, 0, 1);
     camera.lookAt(0, 0, 0);
 
@@ -48,6 +50,26 @@ function initThree() {
     orbit.maxPolarAngle = Math.PI / 2 - Math.PI / 360;
 
     initRenderPipeline();
+    addEventListeners();
+}
+
+function addEventListeners() {
+    canvas.addEventListener("mousedown", () => {
+        isRotationActive = false;
+        setTimeout(() => {
+            isRotationActive = true;
+        }, 1000); // Resume rotation after 1 second
+    });
+}
+
+function rotateCamera() {
+    if (isRotationActive) {
+        const radius = Math.sqrt(camera.position.x ** 2 + camera.position.y ** 2);
+        const angle = Math.atan2(camera.position.y, camera.position.x) + rotationSpeed;
+        camera.position.x = radius * Math.cos(angle);
+        camera.position.y = radius * Math.sin(angle);
+        camera.lookAt(0, 0, 0);
+    }
 }
 
 function initRenderPipeline() {
@@ -117,6 +139,7 @@ function resizeRendererToDisplaySize(renderer) {
 
 async function render() {
     orbit.update();
+    rotateCamera();
 
     if (resizeRendererToDisplaySize(renderer)) {
         const canvas = renderer.domElement;

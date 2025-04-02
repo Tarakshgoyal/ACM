@@ -3,7 +3,6 @@ import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import Form from './form';
 import StarsCanvas from "./preloder";
-import LocationMap from './location';
 
 function Contact() {
   return (

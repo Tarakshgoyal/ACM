@@ -11,24 +11,27 @@ const Navbar = () => {
         className="fixed top-0 right-0 w-full z-50 bg-black/10 backdrop-blur-sm py-4 sm:py-0"
       >
         <div className="container">
-          <div className="flex justify-between items-center">
+          <div className="flex ml-[80px] justify-between items-center">
             <div className="flex items-center gap-4 text-white font-bold text-2xl">
               <img src='/acmlogoo.png' alt="" className="w-20" />
               <a href='http://localhost:3000'>UPES-ACM</a>
             </div>
             <div className="text-white hidden sm:block">
-              <ul className="flex items-center gap-6 text-xl py-4 ">
+              <ul className="flex items-center mr-[-50px] gap-6 text-xl py-4 ">
                 <li>
                   <a href="http://localhost:3000/about">About</a>
                 </li>
                 <li>
-                  <a href="http://localhost:3000/comm">Committes</a>
+                  <a href="http://localhost:3000/committes">Committes</a>
                 </li>
                 <li>
                   <a href="http://localhost:3000/team">Our Team</a>
                 </li>
                 <li>
                   <a href="http://localhost:3000/contact">Contact us</a>
+                </li>
+                <li>
+                  <a href="https://konfhub.com/upes-acm-acm-w-member-registration">Join Us</a>
                 </li>
               </ul>
             </div>

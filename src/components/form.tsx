@@ -40,6 +40,7 @@ const Form = () => {
       toast.success('Message sent successfully!');
       setFormData({ name: '', email: '', subject: '', message: '' });
     } catch (error) {
+      console.log(error);
       toast.error('Failed to send message. Please try again.');
     } finally {
       setIsLoading(false);

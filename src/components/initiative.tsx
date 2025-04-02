@@ -58,7 +58,7 @@ const Initiative: React.FC = () => {
               </div>
             ))}
           </div>
-          <img src='/waveGif.gif' alt='' className="h-[200px] w-full mt-3  object-cover mix-blend-screen -translate-y-24 relative z-[0]"/>
+          <img src='/waveGif.gif' alt='' className="h-[200px] w-full mt-8  object-cover mix-blend-screen -translate-y-24 relative z-[0]"/>
         </div>
       </div>
     </section>

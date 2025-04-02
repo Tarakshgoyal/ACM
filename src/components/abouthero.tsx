@@ -28,7 +28,7 @@ const AboutHero = () => {
             <button
               data-aos="fade-up"
               data-aos-delay="500"
-              className="bg-blue-400 text-white hover:bg-blue-500 px-4 py-1 rounded-md duration-200"
+              className="bg-blur text-white hover:bg-grey px-4 py-1 rounded-md duration-200"
             >
               LEARN MORE
             </button>

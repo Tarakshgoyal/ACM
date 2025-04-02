@@ -5,7 +5,7 @@ import AOS from 'aos'
 import 'aos/dist/aos.css'
 import { Parallax , ParallaxLayer } from '@react-spring/parallax'
 
-const page = () => {
+const Page = () => {
   useEffect(() => {
       AOS.init({
         once: false
@@ -51,7 +51,7 @@ const page = () => {
           className='flex items-center justify-center'
           style={{ textAlign: 'center' }}
         >
-          <h2 className=" text-2xl text-white font-semibold">It's beacutiful as well as dangerous</h2>
+          <h2 className=" text-2xl text-white font-semibold">It&apos;s beacutiful as well as dangerous</h2>
         </ParallaxLayer>
         <ParallaxLayer
           offset={2.54}
@@ -114,7 +114,7 @@ const page = () => {
                 <h1 data-aos-delay="300" data-aos="fade-right" className="text-6xl text-white font-bold">Technical</h1>
             </div>
             <div className='h-screen flex items-center mt-[20px] mr-[-90px]'>
-                <h2 data-aos-delay="300" data-aos="fade-left" className=" text-2xl text-white font-semibold">The Chapter's backbone, the Technical <br />Team not only designs the websites and <br />apps for the Chapter, but also propogates the <br />culture of coding across entire UPES and <br />works on projects that help students learn.</h2>
+                <h2 data-aos-delay="300" data-aos="fade-left" className=" text-2xl text-white font-semibold">The Chapter&apos;s backbone, the Technical <br />Team not only designs the websites and <br />apps for the Chapter, but also propogates the <br />culture of coding across entire UPES and <br />works on projects that help students learn.</h2>
             </div>
           </div>
         </ParallaxLayer>
@@ -126,7 +126,7 @@ const page = () => {
                 <h1 data-aos-delay="300" data-aos="fade-right" className="text-6xl text-white font-bold">Editorial</h1>
             </div>
             <div className='h-screen flex items-center mt-[20px] mr-[-90px]'>
-                <h2 data-aos-delay="300" data-aos="fade-left" className=" text-2xl text-white font-semibold">The Editorial Committee is the brainchild <br />behind the Chapter's all formal <br />communications, blogs, social media <br />content and document all the daily <br />proceedings. This teams gives life to <br />everything you see or read about UPES ACM.</h2>
+                <h2 data-aos-delay="300" data-aos="fade-left" className=" text-2xl text-white font-semibold">The Editorial Committee is the brainchild <br />behind the Chapter&apos;s all formal <br />communications, blogs, social media <br />content and document all the daily <br />proceedings. This teams gives life to <br />everything you see or read about UPES ACM.</h2>
             </div>
           </div>
         </ParallaxLayer>
@@ -138,7 +138,7 @@ const page = () => {
                 <h1 data-aos-delay="300" data-aos="fade-right" className="text-6xl text-white font-bold">Corporate Social <br />Responsibility</h1>
             </div>
             <div className='h-screen flex items-center mt-[20px] mr-[-90px]'>
-                <h2 data-aos-delay="300" data-aos="fade-left" className=" text-2xl text-white font-semibold">Being the reflection of the chapter’s ethics <br />and deeds, the CSR committee curates <br />activities that help contribute to the upliftment <br />of society. It promotes education, and vocational <br />skills among young children.</h2>
+                <h2 data-aos-delay="300" data-aos="fade-left" className=" text-2xl text-white font-semibold">Being the reflection of the chapter&apos;s ethics <br />and deeds, the CSR committee curates <br />activities that help contribute to the upliftment <br />of society. It promotes education, and vocational <br />skills among young children.</h2>
             </div>
           </div>
         </ParallaxLayer>
@@ -159,4 +159,4 @@ const page = () => {
   )
 }
 
-export default page
+export default Page

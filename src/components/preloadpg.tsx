@@ -33,7 +33,7 @@ export default function FloatingImage() {
     >
       <StarsCanvas />
       <motion.img
-        src="/acmlogo.png"
+        src="/acmlogoo.png"
         alt="Floating Image"
         className="w-42 h-32 rounded-lg shadow-lg"
         initial={{ x: "-100vw", scale: 1 }}
