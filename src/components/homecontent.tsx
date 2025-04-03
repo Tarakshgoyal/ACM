@@ -19,7 +19,7 @@ const HeroContent = () => {
                 Computing is not about computers, its about living, living to solve the problems of society using computer science.
             </p>
             <a className='py-2 button-primary text-center text-white cursor-pointer rounded-lg max-w-[200px]' href='https://konfhub.com/upes-acm-acm-w-member-registration'>
-                Join Us
+                Join Us !!
             </a>
         </div>
     </div>
