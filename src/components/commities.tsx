@@ -83,7 +83,7 @@ import { useEffect, useRef } from "react";
 import { EffectComposer } from "three/examples/jsm/postprocessing/EffectComposer.js";
 import { RenderPass } from "three/examples/jsm/postprocessing/RenderPass.js";
 import { UnrealBloomPass } from "three/examples/jsm/postprocessing/UnrealBloomPass.js";
-// @ts-expect-error
+// @ts-expect-error: SomeFunction has incompatible types in this case
 import { Text } from "troika-three-text";
 import spline from "./spline";
 import getStarfield from "./getStarfield";

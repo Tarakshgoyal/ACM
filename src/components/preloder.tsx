@@ -1,13 +1,14 @@
 "use client";
 
 import React, { useState, useRef, Suspense } from "react";
+import * as THREE from "three";
 import { Canvas, useFrame } from "@react-three/fiber";
 import { Points, PointMaterial } from "@react-three/drei";
-// @ts-expect-error
+// @ts-expect-error: SomeFunction has incompatible types in this case
 import * as random from "maath/random/dist/maath-random.esm";
 
-const StarBackground = (props: any) => {
-  const ref: any = useRef();
+const StarBackground = (props: Record<string, any>) => {
+  const ref: React.MutableRefObject<THREE.Points | null> = useRef(null);
   const [sphere] = useState(() =>
     random.inSphere(new Float32Array(5000), { radius: 1.2 })
   );
