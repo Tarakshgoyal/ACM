@@ -19,16 +19,16 @@ const Navbar = () => {
             <div className="text-white hidden sm:block">
               <ul className="flex items-center mr-[-50px] gap-6 text-xl py-4 ">
                 <li>
-                  <a href="http://localhost:3000/about">About</a>
+                  <a href="https://acmjs.vercel.app/about">About</a>
                 </li>
                 <li>
-                  <a href="http://localhost:3000/committes">Committes</a>
+                  <a href="https://acmjs.vercel.app/committes">Committes</a>
                 </li>
                 <li>
-                  <a href="http://localhost:3000/team">Our Team</a>
+                  <a href="https://acmjs.vercel.app/team">Our Team</a>
                 </li>
                 <li>
-                  <a href="http://localhost:3000/contact">Contact us</a>
+                  <a href="https://acmjs.vercel.app/contact">Contact us</a>
                 </li>
                 <li>
                   <a href="https://konfhub.com/upes-acm-acm-w-member-registration">Join Us</a>
