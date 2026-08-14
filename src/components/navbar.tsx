@@ -1,6 +1,7 @@
 'use client'
 
 import React from 'react'
+import Link from 'next/link'
 
 const Navbar = () => {
   return (
@@ -14,24 +15,24 @@ const Navbar = () => {
           <div className="flex ml-[80px] justify-between items-center">
             <div className="flex items-center gap-4 text-white font-bold text-2xl">
               <img src='/acmlogoo.png' alt="" className="w-20" />
-              <a href='https://acmjs.vercel.app'>UPES-ACM</a>
+              <Link href='/'>UPES-ACM</Link>
             </div>
             <div className="text-white hidden sm:block">
               <ul className="flex items-center mr-[-50px] gap-6 text-xl py-4 ">
                 <li>
-                  <a href="https://acmjs.vercel.app/about">About</a>
+                  <Link href="/about">About</Link>
                 </li>
                 <li>
-                  <a href="https://acmjs.vercel.app/committes">Committes</a>
+                  <Link href="/committes">Committes</Link>
                 </li>
                 <li>
-                  <a href="https://acmjs.vercel.app/team">Our Team</a>
+                  <Link href="/team">Our Team</Link>
                 </li>
                 <li>
-                  <a href="https://acmjs.vercel.app/contact">Contact us</a>
+                  <Link href="/contact">Contact us</Link>
                 </li>
                 <li>
-                  <a href="https://konfhub.com/upes-acm-acm-w-member-registration">Join Us</a>
+                  <Link href="/sih26">SIH 2026</Link>
                 </li>
               </ul>
             </div>

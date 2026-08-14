@@ -32,10 +32,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <Navbar/>
       <body
         className={`${montserrat.variable} antialiased`}
       >
+        <Navbar/>
         <FloatingImage/>
         {children}
       </body>
