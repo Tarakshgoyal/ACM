@@ -6,7 +6,7 @@ import 'aos/dist/aos.css'
 
 const Achiv2 = () => {
   useEffect(() => {
-    AOS.init({ duration: 1000,once: false })
+    AOS.init({ duration: 1000, once: false })
   }, [])
 
   return (
@@ -27,22 +27,22 @@ const Achiv2 = () => {
                 data-aos-delay="500"
                 className="uppercase text-5xl"
               >
-                Code Anytime
+                Flutter
               </h1>
               <p data-aos="fade-up" data-aos-delay="700">
-                Code Anytime is our round-the-year initiative to encourage free-spirited coding among beginners to amplify their passion for programming.
+                Flutter is an open-source framework for building cross-platform applications using a single codebase. Through the Flutter initiative, students can learn modern application development, UI design, Dart programming, API integration, and project development. It provides an opportunity to transform ideas into functional applications while developing practical skills that can be applied to real-world projects.
               </p>
               <button
                 data-aos="fade-up"
                 data-aos-delay="900"
                 className="bg-blur text-white hover:bg-grey px-4 py-1 rounded-md duration-200"
               >
-                15+ Mentors | 200+ Students
+                100+ Students
               </button>
             </div>
             <div data-aos="zoom-in">
               <img
-                src="/img3.jpg"
+                src="/img2.jpg"
                 alt=""
                 className="w-full sm:w-[80%] mx-auto max-h-[300px] object-cover"
               />

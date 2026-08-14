@@ -11,7 +11,7 @@
 //     { name: 'Jupiter', position: [-4, 1, -8] as [number, number, number], size: 1 },
 //     { name: 'Saturn', position: [5, -2, -10] as [number, number, number], size: 0.8 },
 //   ];
-  
+
 
 // const Ship = () => {
 //   const shipRef = useRef<THREE.Mesh>(null);
@@ -145,8 +145,8 @@ const ThreeScene = () => {
     scene.add(boxGroup);
 
     const boxLabels = [
-      "Technical", "Events", "Public Relations & Sponsorship",
-      "Design & VFX", "Editorial", "Corporate Social Responsibility", "Operations"
+      "Technical", "Events & Planning", "Marketing",
+      "Design", "Photography"
     ];
     const numBoxes = 20;
     const size = 0.1;
@@ -250,8 +250,8 @@ const ThreeScene = () => {
 
     return () => {
       mountRef.current?.removeChild(renderer.domElement);
-      window.removeEventListener("mousemove", () => {});
-      window.removeEventListener("resize", () => {});
+      window.removeEventListener("mousemove", () => { });
+      window.removeEventListener("resize", () => { });
     };
   }, []);
 

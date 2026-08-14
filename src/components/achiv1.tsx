@@ -18,7 +18,7 @@ const Achiv1 = () => {
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 items-center">
             <div data-aos="zoom-in">
               <img
-                src="/img2.jpg"
+                src="/img1.jpg"
                 alt=""
                 className="w-full sm:w-[80%] mx-auto max-h-[300px] object-cover"
               />
@@ -36,19 +36,17 @@ const Achiv1 = () => {
                 data-aos-delay="500"
                 className="uppercase text-5xl"
               >
-                Hour of Code
+                OSOC
               </h1>
               <p data-aos="fade-up" data-aos-delay="700">
-                The CSR team puts their words to action, and brings smiles
-                across the faces of the underprivileged society. The team makes
-                the activities as interactive as possible.
+                OSOC (Open Summer of Code) is an initiative focused on providing students with hands-on experience in open-source development. Participants contribute to real-world projects through GitHub, work on assigned issues, collaborate with other developers, and receive guidance through mentorship and code reviews. It helps students strengthen their development skills while building a meaningful open-source portfolio.
               </p>
               <button
                 data-aos="fade-up"
                 data-aos-delay="900"
                 className="bg-blur text-white hover:bg-grey px-4 py-1 rounded-md duration-200"
               >
-                100+ Students
+                200+ Students
               </button>
             </div>
           </div>

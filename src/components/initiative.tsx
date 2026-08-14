@@ -14,17 +14,17 @@ interface InitiativeItem {
 const init: InitiativeItem[] = [
   {
     title: 'Years in the Game!',
-    content: '13+',
+    content: '5+',
     description:
-      'hhhjhhjjgughvg',
+      'Building a culture of open collaboration',
     icon: <FaLaptopCode className="text-7xl" />,
     aosDelay: '500',
   },
   {
-    title: 'Members (for 2024-25)',
+    title: 'Members So Far',
     content: '600+',
     description:
-      'jgvjgvghvhgvhvbjlbkbkl',
+      'Students learning, building & contributing together',
     icon: <FaUsers className="text-7xl" />,
     aosDelay: '700',
   },
@@ -32,7 +32,7 @@ const init: InitiativeItem[] = [
     title: 'Events Conducted',
     content: '150+',
     description:
-      'jfgvugvujbhbuguyfytdyvikjnkj',
+      'Workshops, hackathons & tech community events',
     icon: <FaCalendarAlt className="text-7xl" />,
     aosDelay: '900',
   },
