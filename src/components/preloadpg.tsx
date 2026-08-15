@@ -35,7 +35,7 @@ export default function FloatingImage() {
     }, 6000);
 
     return () => clearTimeout(timer);
-  }, [animKey, controls]);
+  }, [animKey, controls, showPreloader]);
 
   if (!showPreloader) return null;
 
@@ -49,9 +49,9 @@ export default function FloatingImage() {
     >
       <StarsCanvas />
       <motion.img
-        src="/acmlogoo.png"
+        src="/open-logo.jpg"
         alt="Floating Image"
-        className="w-42 h-32 rounded-lg shadow-lg"
+        className="w-72 h-64 rounded-lg shadow-lg"
         initial={{ x: "-100vw", scale: 1 }}
         animate={controls}
       />

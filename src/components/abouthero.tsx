@@ -6,8 +6,8 @@ import 'aos/dist/aos.css'
 
 const AboutHero = () => {
   useEffect(() => {
-    AOS.init({ 
-      once: false,     
+    AOS.init({
+      once: false,
     })
   }, [])
 
@@ -17,20 +17,19 @@ const AboutHero = () => {
         <div className="container grid grid-cols-1 sm:grid-cols-2 gap-4">
           <div className="text-white space-y-4 lg:pr-36">
             <h1 data-aos="fade-up" className="text-5xl w-[550px] font-bold">
-              ABOUT OUR CHAPTER
+              ABOUT OUR COMMUNITY
             </h1>
             <p data-aos="fade-up" data-aos-delay="300">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam ea
-              dolorem eius accusamus beatae. Nulla quis beatae quo, possimus
-              tempora similique dignissimos repellat aperiam veniam culpa
-              consequatur repudiandae asperiores saepe.
+              Building the Future
+              with Open Source
+              Join UPES Dehradun&apos;s premier open-source community. Learn, contribute, and shape tomorrow&apos;s technology together
             </p>
             <button
               data-aos="fade-up"
               data-aos-delay="500"
               className="bg-blur text-white hover:bg-grey px-4 py-1 rounded-md duration-200"
             >
-              LEARN MORE
+              Scroll! To Know More About Us
             </button>
           </div>
           <div></div>
