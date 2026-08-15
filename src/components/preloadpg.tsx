@@ -35,7 +35,7 @@ export default function FloatingImage() {
     }, 6000);
 
     return () => clearTimeout(timer);
-  }, [animKey, controls]);
+  }, [animKey, controls, showPreloader]);
 
   if (!showPreloader) return null;
 

@@ -69,11 +69,13 @@ const SpaceBackground = () => {
       rendererRef.current.setSize(window.innerWidth, window.innerHeight)
     }
 
+    const container = containerRef.current
+
     window.addEventListener("resize", handleResize)
 
     return () => {
       window.removeEventListener("resize", handleResize)
-      containerRef.current?.removeChild(rendererRef.current!.domElement)
+      container?.removeChild(rendererRef.current!.domElement)
     }
   }, [])
 

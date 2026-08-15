@@ -248,8 +248,10 @@ const ThreeScene = () => {
       renderer.setSize(w, h);
     });
 
+    const mountNode = mountRef.current;
+
     return () => {
-      mountRef.current?.removeChild(renderer.domElement);
+      mountNode?.removeChild(renderer.domElement);
       window.removeEventListener("mousemove", () => { });
       window.removeEventListener("resize", () => { });
     };

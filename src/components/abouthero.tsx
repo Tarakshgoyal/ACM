@@ -4,8 +4,6 @@ import React, { useEffect } from 'react'
 import AOS from 'aos'
 import 'aos/dist/aos.css'
 
-import Link from 'next/link'
-
 const AboutHero = () => {
   useEffect(() => {
     AOS.init({
@@ -24,7 +22,7 @@ const AboutHero = () => {
             <p data-aos="fade-up" data-aos-delay="300">
               Building the Future
               with Open Source
-              Join UPES Dehradun's premier open-source community. Learn, contribute, and shape tomorrow's technology together
+              Join UPES Dehradun&apos;s premier open-source community. Learn, contribute, and shape tomorrow&apos;s technology together
             </p>
             <button
               data-aos="fade-up"
