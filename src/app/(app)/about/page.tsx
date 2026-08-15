@@ -16,6 +16,7 @@ const About = () => {
           autoPlay
           loop
           muted
+          preload="metadata"
           className="fixed right-0 top-0 h-[700px] w-full object-cover z-0"
         ></video>
         <Abouthero />
@@ -24,7 +25,7 @@ const About = () => {
         <Initiative />
         <div>
           <Achiv1 />
-          <div className='ml-12'>
+          <div>
             <Achiv2/>
           </div>
           <Achiv3/>

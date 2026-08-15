@@ -44,6 +44,7 @@ const Achiv2 = () => {
               <img
                 src="/img2.jpg"
                 alt=""
+                loading="lazy"
                 className="w-full sm:w-[80%] mx-auto max-h-[300px] object-cover"
               />
             </div>

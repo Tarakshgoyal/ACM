@@ -16,7 +16,7 @@ const AboutHero = () => {
       <div className="h-full flex justify-center items-center p-4 relative z-10">
         <div className="container grid grid-cols-1 sm:grid-cols-2 gap-4">
           <div className="text-white space-y-4 lg:pr-36">
-            <h1 data-aos="fade-up" className="text-5xl w-[550px] font-bold">
+            <h1 data-aos="fade-up" className="text-3xl sm:text-4xl md:text-5xl max-w-xl w-full font-bold">
               ABOUT OUR COMMUNITY
             </h1>
             <p data-aos="fade-up" data-aos-delay="300">
@@ -39,6 +39,7 @@ const AboutHero = () => {
       <img
         src="/moon-surface-hd.png"
         alt="Moon Surface"
+        loading="lazy"
         className="absolute right-0 bottom-0 w-full brightness-50 z-0"
       />
 

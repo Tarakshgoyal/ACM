@@ -18,6 +18,7 @@ const Achiv3 = () => {
               <img
                 src='img3.jpg'
                 alt=""
+                loading="lazy"
                 className="w-full sm:w-[80%] mx-auto max-h-[300px] object-cover"
               />
             </div>
