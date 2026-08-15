@@ -28,18 +28,18 @@ import {
 } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Smart India Hackathon 2026 | UPES ACM",
+  title: "Smart India Hackathon 2026 | UPES OPEN community",
   description:
     "Register for the UPES internal selection round for Smart India Hackathon 2026 and take your idea to the national stage.",
   openGraph: {
-    title: "Smart India Hackathon 2026 | UPES ACM",
+    title: "Smart India Hackathon 2026 | UPES OPEN community",
     description:
       "Build bold solutions, compete in the UPES internal round, and represent UPES at Smart India Hackathon 2026.",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Smart India Hackathon 2026 | UPES ACM",
+    title: "Smart India Hackathon 2026 | UPES OPEN community",
     description: "Build bold solutions and represent UPES at SIH 2026.",
   },
 };
@@ -128,7 +128,7 @@ export default function Sih2026Page() {
             <div className="mb-7 inline-flex items-center gap-2 rounded-full border border-cyan-300/25 bg-cyan-300/5 px-4 py-2 text-xs font-semibold uppercase tracking-[0.22em] text-cyan-200 backdrop-blur-md">
               <Sparkles className="h-4 w-4" aria-hidden="true" /> UPES Internal Selection Round
             </div>
-            <p className="mb-4 text-sm font-semibold uppercase tracking-[0.3em] text-slate-400">UPES ACM Student Chapter presents</p>
+            <p className="mb-4 text-sm font-semibold uppercase tracking-[0.3em] text-slate-400">UPES OPEN community presents</p>
             <h1 className="text-balance text-5xl font-extrabold leading-[0.98] tracking-tight sm:text-7xl lg:text-8xl">
               Smart India
               <span className="block bg-gradient-to-r from-purple-400 via-fuchsia-300 to-cyan-300 bg-clip-text text-transparent">Hackathon 2026</span>
@@ -255,7 +255,7 @@ export default function Sih2026Page() {
           </div>
         </section>
 
-        <footer className="border-t border-white/10 px-4 py-8 text-center text-sm text-slate-500"><p>UPES ACM Student Chapter · Smart India Hackathon 2026</p><a href="#top" className="mt-2 inline-block text-slate-400 transition hover:text-cyan-300">Back to mission control ↑</a></footer>
+        <footer className="border-t border-white/10 px-4 py-8 text-center text-sm text-slate-500"><p>UPES OPEN community · Smart India Hackathon 2026</p><a href="#top" className="mt-2 inline-block text-slate-400 transition hover:text-cyan-300">Back to mission control ↑</a></footer>
       </div>
       <SihChatbot />
     </main>
