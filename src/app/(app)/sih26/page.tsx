@@ -113,8 +113,8 @@ const rules = [
 
 const resources = [
   ["Official SIH portal", "National announcements and official Smart India Hackathon updates.", "https://www.sih.gov.in/", ExternalLink],
-  ["Problem statements", "Browse the SIH 2026 problem-statement reference used by the sample site.", "https://cgeccse.in/sih-statements", ChevronRight],
-  ["Presentation format", "Download the SIH 2026 presentation template referenced by the sample site.", "https://cgeccse.in/SIH2026.pptx", Presentation],
+  ["Problem statements", "Browse the SIH 2026 problem-statement reference used by the sample site.", "https://www.sih.gov.in/sih2025PS", ChevronRight],
+  ["Presentation format", "Download the SIH 2026 presentation template referenced by the sample site.", "https://www.sih.gov.in/sih2025PS/img/SIH2025-Presentation-template.pptx", Presentation],
   ["College SPOC guidelines", "Review the official institution-level participation guidelines.", "https://www.sih.gov.in/letters/Guidelines-College-SPOC.pdf", Download],
 ] as const;
 
