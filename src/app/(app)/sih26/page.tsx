@@ -181,7 +181,7 @@ export default function Sih2026Page() {
         <section id="themes" className="scroll-mt-24 py-24">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div className="flex flex-col justify-between gap-6 sm:flex-row sm:items-end">
-              <div><p className="text-sm font-bold uppercase tracking-[0.22em] text-purple-300">Innovation domains</p><h2 className="mt-4 text-4xl font-bold tracking-tight sm:text-5xl">Find your frontier.</h2></div>
+              <div><p className="text-sm font-bold uppercase tracking-[0.22em] text-purple-300">Innovation theames</p><h2 className="mt-4 text-4xl font-bold tracking-tight sm:text-5xl">Find your frontier.</h2></div>
               <p className="max-w-md text-sm leading-7 text-slate-400">Swipe or scroll through key SIH domains. Choose a problem where your team&apos;s knowledge can create meaningful change.</p>
             </div>
             <div className="-mx-4 mt-12 flex snap-x snap-mandatory gap-5 overflow-x-auto px-4 pb-6 sm:mx-0 sm:px-0">
