@@ -2,9 +2,12 @@
 
 import React, { useState } from 'react'
 import Link from 'next/link'
+import { usePathname } from 'next/navigation'
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false)
+  const pathname = usePathname()
+  const isSih = pathname === '/sih26'
 
   return (
     <nav
@@ -13,16 +16,28 @@ const Navbar = () => {
     >
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center py-3 sm:py-4">
-          {/* Logo */}
-          <div className="flex items-center gap-3 text-white font-bold text-lg sm:text-2xl shrink-0">
-            <img src='/open-logo.jpg' alt="OPEN Community Logo" className="w-12 sm:w-16 lg:w-20 rounded" />
-            <div className="flex flex-col">
-              <Link href='/' className="leading-tight">OPEN COMMUNITY</Link>
-              <span className="text-[10px] sm:text-sm font-normal text-gray-300">
-                Aware.Adopt.Contribute
-              </span>
+          {/* Logo — conditional based on route */}
+          {isSih ? (
+            <div className="flex items-center gap-3 text-white font-bold text-lg sm:text-2xl shrink-0">
+              <img src='/sih.png' alt="SIH 2026 Logo" className="w-10 sm:w-14 lg:w-16 rounded" />
+              <div className="flex flex-col">
+                <Link href='/sih26' className="leading-tight">Smart India Hackathon</Link>
+                <span className="text-[10px] sm:text-sm font-normal text-cyan-200">
+                  SIH 2026
+                </span>
+              </div>
             </div>
-          </div>
+          ) : (
+            <div className="flex items-center gap-3 text-white font-bold text-lg sm:text-2xl shrink-0">
+              <img src='/open-logo.jpg' alt="OPEN Community Logo" className="w-12 sm:w-16 lg:w-20 rounded" />
+              <div className="flex flex-col">
+                <Link href='/' className="leading-tight">OPEN COMMUNITY</Link>
+                <span className="text-[10px] sm:text-sm font-normal text-gray-300">
+                  Aware.Adopt.Contribute
+                </span>
+              </div>
+            </div>
+          )}
 
           {/* Desktop nav links */}
           <ul className="hidden md:flex items-center gap-4 lg:gap-6 text-lg lg:text-xl text-white">
