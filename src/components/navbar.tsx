@@ -29,7 +29,7 @@ const Navbar = () => {
             <div className={`flex items-center gap-3 ${textColor} font-bold text-lg sm:text-2xl shrink-0`}>
               <img src='/sih.png' alt="SIH 2026 Logo" className="w-10 sm:w-14 lg:w-16 rounded" />
               <div className="flex flex-col">
-                <Link href='/sih26' className="leading-tight">Smart India Hackathon</Link>
+                <Link href='/' className="leading-tight">Smart India Hackathon</Link>
                 <span className={`text-[10px] sm:text-sm font-normal ${subtitleColor}`}>
                   SIH 2026
                 </span>
