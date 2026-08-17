@@ -98,7 +98,8 @@ const processSteps = [
   ["05", "Represent UPES", "Shortlisted teams are guided through the official SIH submission process."],
 ];
 
-const stepDotColors = ["bg-[#F26522]", "bg-[#1B3764]", "bg-[#2E7D32]", "bg-[#F26522]", "bg-[#2E7D32]"] as const;
+const stepDotRingColors = ["border-[#F26522]", "border-[#1B3764]", "border-[#2E7D32]", "border-[#F26522]", "border-[#2E7D32]"] as const;
+const stepDotFillColors = ["bg-[#F26522]", "bg-[#1B3764]", "bg-[#2E7D32]", "bg-[#F26522]", "bg-[#2E7D32]"] as const;
 
 const rules = [
   "Each team must have exactly six students: one team leader and five members.",
@@ -235,7 +236,7 @@ export default function Sih2026Page() {
             </div>
             <ol className="relative mt-14 md:grid md:grid-cols-5 md:gap-0">
               {/* Dashed connecting line (desktop only) */}
-              <div className="pointer-events-none absolute left-[10%] right-[10%] top-[11px] hidden h-[2px] md:block" style={{ backgroundImage: "repeating-linear-gradient(90deg, #1B3764 0 6px, transparent 6px 14px)", opacity: 0.2 }} aria-hidden="true" />
+              <div className="pointer-events-none absolute left-[2%] right-[2%] top-[60px] hidden h-[2px] md:block" style={{ backgroundImage: "repeating-linear-gradient(90deg, #1B3764 0 6px, transparent 6px 14px)", opacity: 0.2 }} aria-hidden="true" />
               {processSteps.map(([step, title, description], i) => (
                 <li key={step} className="relative pb-10 pl-10 last:pb-0 md:px-4 md:pb-0 md:pl-0 md:pt-12 md:text-left">
                   {/* Mobile vertical line */}
@@ -243,7 +244,10 @@ export default function Sih2026Page() {
                     <div className="absolute left-[7px] top-[18px] h-full w-[2px] md:hidden" style={{ backgroundImage: "repeating-linear-gradient(180deg, #1B3764 0 4px, transparent 4px 10px)", opacity: 0.2 }} aria-hidden="true" />
                   )}
                   {/* Dot */}
-                  <span className={`absolute left-0 top-0 h-4 w-4 rounded-full ${stepDotColors[i]} shadow-sm md:relative md:left-auto md:top-auto md:mb-5`} />
+                  {/* Ring dot */}
+                  <span className={`absolute left-0 top-0 flex h-6 w-6 items-center justify-center rounded-full border-[2.5px] ${stepDotRingColors[i]} bg-white md:relative md:left-auto md:top-auto md:mb-5`}>
+                    <span className={`block h-2.5 w-2.5 rounded-full ${stepDotFillColors[i]}`} />
+                  </span>
                   <p className="font-mono text-xs font-bold uppercase tracking-wider text-[#1B3764]/40">Step {step}</p>
                   <h3 className="mt-2 text-lg font-bold text-[#1B3764]">{title}</h3>
                   <p className="mt-2 text-sm leading-6 text-[#1B3764]/50">{description}</p>
